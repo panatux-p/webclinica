@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div fxLayout="row">
+      <button mat-button>
+        <mat-icon>home</mat-icon>
+        <span class="logo">Multi Servicios</span>
+      </button>
+      <div *ngIf="!deviceXs">
+        <button mat-button>Inicio</button>
+        <button mat-button>Contacto</button>
+        <button mat-button>Nosotros</button>
+        <button mat-button>Ubicacion</button>
+        <button mat-button>Servicios</button>
+      </div>
+    </div>
+    <div>
+      <button mat-icon-button>
+        <mat-icon *ngIf="deviceXs">menu</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
+    <button mat-button>Inicio</button>
+    <button mat-button>Contacto</button>
+    <button mat-button>Nosotros</button>
+  </mat-toolbar-row>
+</mat-toolbar>
